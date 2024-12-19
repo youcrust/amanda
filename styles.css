@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background-color: #f8f9fa;
+    color: #333;
+    margin-top: 300px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    /* background-color: #333; */
+    background: url("https://as2.ftcdn.net/v2/jpg/02/31/45/09/1000_F_231450975_24pNwcimidRMdDcSxTSa9m0PlXruX0cQ.jpg");
+    color: #fff;
+    padding: 1.5rem;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar a:hover {
+    /* background-color: #ddd; */
+    color: gold;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+    width: calc(100% - 220px);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Image Section */
+.scroll-section {
+    margin: 3rem 0;
+}
+
+.image-textbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Textbox styling */
+.textbox {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 300px;
+}
+
+.bigtextbox {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+}
+
+/* Fade-in effect */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
+
+
+
+/* Small Image at Bottom Right */
+.emerging-bottom-image {
+    position: fixed;
+    bottom: 0px; /*-100px; Start hidden below the viewport */
+    right: 20px; /* Align to the bottom-right corner */
+    opacity: 0;
+    transition: bottom 2s ease, opacity 2s ease;
+    transform: translateX(0);
+}
+
+.emerging-bottom-visible {
+    bottom: 0px;/* 20px; /* Slide up into view */
+    opacity: 1;
+}
+
+.emerging-bottom-image img {
+    width: 150px;
+    height: auto;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+
+.christmas-blue {
+    color: #035ee2;
+    background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/blue_glitter.gif) repeat;
+    background: -o-linear-gradient(transparent, transparent) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin: 0;
+    padding: 0;
+
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    z-index: 999999;
+    -webkit-background-clip: text;
+}
+
+.christmas-gold {
+	/* color: #D81E1E; */
+    color: gold;
+	background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/gold_glitter.gif) repeat;
+	background: -o-linear-gradient(transparent, transparent) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	margin: 0;
+	padding: 0;
+
+	font-weight: 900;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	z-index: 999999;
+	-webkit-background-clip: text;
+}
+
+.christmas-green {
+    color: green;
+	background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/green_glitter.gif) repeat;
+	background: -o-linear-gradient(transparent, transparent) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	margin: 0;
+	padding: 0;
+
+	font-weight: 900;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	z-index: 999999;
+	-webkit-background-clip: text;
+}
+
+.christmas-pink {
+    color: pink;
+	background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/pink_glitter.gif) repeat;
+	background: -o-linear-gradient(transparent, transparent) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	margin: 0;
+	padding: 0;
+
+	font-weight: 900;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	z-index: 999999;
+	-webkit-background-clip: text;
+}
+
+h1 {
+    position: absolute;
+    font-size: 8.5vw;
+    width:100%;
+    height:100%;
+    /* text-align:center; */
+    max-height:100px;
+    z-index:2;
+    line-height:1;
+    margin-top:-260px;
+    color:#fff;
+    font-family: 'Mountains of Christmas', cursive;
+  }
+
+
