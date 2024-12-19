@@ -1,5 +1,0 @@
-#Protect Directory
-AuthName "Dialog prompt"
-AuthType Basic
-AuthUserFile /home/username/example.com/.htpasswd
-Require valid-user
