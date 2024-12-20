@@ -65,3 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// experiment 
+// Get references to the sidebar and the toggle button
+const sidebar = document.querySelector('.sidebar');
+const toggleButton = document.querySelector('.sidebar-toggle');
+
+// Add an event listener to the toggle button
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('open'); // Toggle the 'open' class to show/hide the sidebar
+});
+
