@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollImage = document.getElementById("scroll-image");
+//   const sidebar = document.getElementById('.sidebar'); // Replace 'sidebar' with the actual ID of your sidebar element
+//   const sidebarWidth = sidebar.offsetWidth;
+//   console.log(sidebarWidth);
   const sidebarWidth = 220; // Width of the sidebar in pixels
 
   window.addEventListener("scroll", () => {

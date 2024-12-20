@@ -288,6 +288,7 @@ h1 {
         border-top: 1px solid var(--line-clr);
         padding: 0;
         position: fixed;
+        z-index: 100;
         /* top: unset;
         bottom: 0; */
         
