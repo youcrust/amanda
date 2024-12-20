@@ -44,3 +44,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollImage = document.getElementById("scroll-image");
+  const sidebarWidth = 220; // Width of the sidebar in pixels
+
+  window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY; // Pixels scrolled from the top
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight; // Total scrollable height
+      const scrollPercentage = scrollTop / scrollHeight; // Percentage scrolled
+
+      // Calculate the new horizontal position of the image
+      const screenWidth = window.innerWidth - sidebarWidth; // Exclude sidebar width
+      const imagePosition = 20 + scrollPercentage * (screenWidth - 90); // 50px is the image width
+
+      // Update the image's position
+      scrollImage.style.left = `${imagePosition}px`;
+  });
+});
+
+
+

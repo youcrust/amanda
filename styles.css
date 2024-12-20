@@ -8,11 +8,13 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Mountains of Christmas', cursive;
     display: flex;
     background-color: #f8f9fa;
     color: #333;
     margin-top: 300px;
+    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.9)), url("https://as2.ftcdn.net/v2/jpg/02/31/45/09/1000_F_231450975_24pNwcimidRMdDcSxTSa9m0PlXruX0cQ.jpg");
 }
 
 /* Sidebar */
@@ -37,6 +39,11 @@ body {
 .sidebar a:hover {
     /* background-color: #ddd; */
     color: gold;
+    transform: scale(1.1);
+}
+
+li:hover{
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -67,9 +74,31 @@ img {
     width: 100%;
     max-width: 400px;
     height: auto;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.img2{
+    background: url("https://t3.ftcdn.net/jpg/00/49/52/14/240_F_49521479_abt1PXflWUOEDarOB1j9cxktkr0UYmxy.jpg");
+    background-size: 400px 300px;
+    padding: 48px;
+    margin: 0 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.airbnb-embed-frame a{
+    background: url("https://t3.ftcdn.net/jpg/00/49/52/14/240_F_49521479_abt1PXflWUOEDarOB1j9cxktkr0UYmxy.jpg");
+}
+
+.airbnb-embed-frame a:hover{
+    transform: scale(1.1);
 }
 
 /* Textbox styling */
@@ -103,18 +132,6 @@ img {
     transition: all 1s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-    .main-content {
-        margin-left: 0;
-        padding: 1rem;
-    }
-}
-
-
 
 /* Small Image at Bottom Right */
 .emerging-bottom-image {
@@ -137,6 +154,32 @@ img {
     /* border-radius: 8px; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
+
+/* Small sled*/
+/* Scroll Image Container */
+#scroll-image-container {
+    position: fixed;
+    top: 20px; /* Distance from the top of the screen */
+    left: 220px; /* Start after the sidebar (assuming sidebar is 220px wide) */
+    width: 50px; /*calc(100% - 220px); /* Adjust width to exclude the sidebar */
+    height: 50px; /* Image height */
+    z-index: 1000; /* Ensure it stays above other elements */
+    pointer-events: none; /* Avoid interfering with user interactions */
+}
+
+/* The Image */
+#scroll-image {
+    position: absolute;
+    top: 0;
+    left: 0; /* Start at the left of the container */
+    height: 50px; /* Adjust as per the image size */
+    transition: left 0.1s ease; /* Smooth movement */
+}
+
+
+
+
 
 
 .christmas-blue {
@@ -217,9 +260,79 @@ h1 {
     max-height:100px;
     z-index:2;
     line-height:1;
-    margin-top:-260px;
+    margin-top:-240px;
     color:#fff;
     font-family: 'Mountains of Christmas', cursive;
   }
 
+
+  /* Responsive Adjustments for Small Screens (iPhones) */
+@media (max-width: 768px) {
+    /* Hide Sidebar */
+    .sidebar {
+        display: none;
+    }
+
+    /* Adjust Main Content to Full Width */
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    /* Adjust Image Sizes */
+    .image-textbox-wrapper img {
+        max-width: 100%; /* Images will scale to fit screen width */
+        height: auto;
+    }
+
+    /* Adjust Scroll Image */
+    #scroll-image-container {
+        left: 10px; /* Align closer to the left edge */
+        width: 50px;
+        height: 50px;
+    }
+
+    #scroll-image {
+        height: 40px; /* Smaller size for smaller screens */
+    }
+
+    /* Adjust Textbox Widths */
+    .textbox,
+    .bigtextbox {
+        max-width: 100%; /* Make textboxes full width */
+    }
+
+    /* Adjust Header Text Size */
+    h1 {
+        font-size: 6vw; /* Scale header size for smaller screens */
+        margin-top: -100px;
+    }
+
+    /* Adjust Footer Padding */
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra Small Screens (iPhones SE) */
+    h1 {
+        font-size: 5vw; /* Smaller font size */
+    }
+
+    .christmas-blue,
+    .christmas-gold {
+        letter-spacing: 0.5px; /* Adjust spacing */
+    }
+
+    #scroll-image-container {
+        left: 5px; /* Align even closer to the edge */
+    }
+
+    #scroll-image {
+        height: 30px; /* Reduce image size further */
+    }
+}
 
