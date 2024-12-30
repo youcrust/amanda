@@ -3,19 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerging Image at Bottom</title>
-    <!-- Google Font: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Merry Chrymas</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
+    <audio id="my_audio" src="./Mr Hanky The Christmas Poo Song.mp3" loop="loop"></audio>
     <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <h2 style="color: black;">Presents</h2>
+    <nav class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#image1">Felix' presents</a></li>
-            <li><a href="#image2">Our getaway</a></li>
-            <li><a href="#letter">My letter to you</a></li>
+            <li>
+ 
+                <span class="logo">Prensents</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <img id="toggle-btn-img" src="./images/present.png">
+                </button>
+            </li>
+            <li>
+                <a href="#letter">
+                    <img class="frame" id="sidebar-icon" src="./images/letter.png">
+                    <span class="christmas-green">My letter to you</span>
+                </a>
+            </li>
+            <li >
+                <a href="#image1">
+                    <img class="frame" id="sidebar-icon" src="./images/cat.png">
+                    <span class="christmas-green">Felix' presents</span>
+                </a>
+            </li>
+            <li>
+                <a href="#image2">
+                    <img class="frame" id="sidebar-icon" src="./images/snowy_house.png">
+                    <span class="christmas-green">Our getaway</span>
+                </a>
+            </li>
+       
         </ul>
     </nav>
 
@@ -23,7 +45,7 @@
     <div class="main-content">
         <div class="container">
 
-            <div id="christmastitle">
+            <!-- <div id="christmastitle">
                 <header>
                     <h1 class="christmas">
                         <span class="christmas-blue">M</span><span class="christmas-gold">e</span><span class="christmas-blue">r</span><span class="christmas-gold">r</span><span class="christmas-blue">y</span>
@@ -31,73 +53,77 @@
                         <span class="christmas-blue">A</span><span class="christmas-gold">m</span><span class="christmas-blue">a</span><span class="christmas-gold">n</span><span class="christmas-blue">d</span><span class="christmas-gold">a</span><span class="christmas-blue">!</span>
                     </h1>
                 </header>
-            </div>
+            </div> -->
             
             <main>
                 <div id="scroll-image-container">
-                    <img id="scroll-image" src="https://cdn3.vectorstock.com/i/1000x1000/85/37/cartoon-sleigh-of-santa-claus-sled-winter-vector-22368537.jpg" alt="Scrolling Image">
+                    <img id="scroll-image" src="./images/sled.png" alt="Scrolling Image">
                 </div>
                 
-                <section>
-                    <h2>So I was thinking...</h2>
-                    <p>as I couldn't really settle for one present, we'll have to make it many <3</p>
-                </section>
-
-                <!-- Image 1 Section -->
-                <!-- <section id="image1" class="scroll-section">
-                    <img src="https://via.placeholder.com/600x400" alt="Image 1" class="fade-in hidden">
-                </section> -->
-                <!-- <section id="image1" class="scroll-section"></section>
-                    <div class="image-textbox-wrapper">
-                        <div class="textbox right-textbox">
-                            <h3>About Image 1</h3>
-                            <p>Here’s some placeholder text for the second image.</p>
-                        </div>
-                        <img src="https://via.placeholder.com/600x400" alt="Image 1" class="fade-in hidden">
-                    </div>
-                </section> -->
-                <div id="image1" class="image-textbox-wrapper">
-                    <img src="https://via.placeholder.com/600x400" alt="Image 1" class="fade-in hidden img2">
-                    <div class="textbox right-textbox">
-                        <h3>Felix' Presents</h3>
-                        <p>Bow ties, if he doesn't have a collar for the bow ties we'll order one!</p>
-                    </div>
-                </div>
-
-                <!-- Image 2 Section -->
-                <section id="image2" class="scroll-section">
-                    <div class="image-textbox-wrapper">
-                        <div class="textbox left-textbox">
-                            <h3>Our Getaway</h3>
-                            <p>Here’s some placeholder text for the second image.</p>
-                        </div>
-                        <img src="https://m.media-amazon.com/images/I/513HVzCDz4L._AC_SL1500_.jpg" alt="Image 2" class="fade-in hidden img2">
-                    </div>
-                </section>
-
-                <!-- Airbnb Section -->
-                <section id="airbnb" class="scroll-section">
-                    <div class="image-textbox-wrapper">
-                        <div class="airbnb-embed-frame" data-id="1134933793312650668" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                            <a href="https://www.airbnb.com/rooms/1134933793312650668?check_in=2025-01-17&amp;check_out=2025-01-19&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget">View On Airbnb</a>
-                            <a href="https://www.airbnb.com/rooms/1134933793312650668?check_in=2025-01-17&amp;check_out=2025-01-19&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget" rel="nofollow">Cabin in Brighton · ★5.0 · 2 bedrooms · 3 beds · 1 bath</a>
-                            <script async="" src="https://www.airbnb.com/embeddable/airbnb_jssdk"></script>
-                        </div>
-                        <div class="textbox right-textbox">
-                            <h3>About Image 2</h3>
-                            <p>Here’s some placeholder text for the second image.</p>
-                        </div>
-                    </div>
+                <section class="scroll-section">
+            
+                    <h1 class="christmas">
+                        <span class="christmas-blue">M</span><span class="christmas-gold">e</span><span class="christmas-blue">r</span><span class="christmas-gold">r</span><span class="christmas-blue">y</span>
+                        <span class="christmas-blue">C</span><span class="christmas-gold">h</span><span class="christmas-blue">r</span><span class="christmas-gold">i</span><span class="christmas-blue">s</span><span class="christmas-gold">t</span><span class="christmas-blue">m</span><span class="christmas-gold">a</span></span><span class="christmas-blue">s</span><span class="christmas-gold">,</span><br/>
+                        <span class="christmas-blue">A</span><span class="christmas-gold">m</span><span class="christmas-blue">a</span><span class="christmas-gold">n</span><span class="christmas-blue">d</span><span class="christmas-gold">a</span><span class="christmas-blue">!</span>
+                    </h1>
+                    
                 </section>
 
                 <section id="letter" class="scroll-section">
                     <div class="image-textbox-wrapper">
                         <div class="bigtextbox">
                             <h3>My letter to you</h3>
-                            <p>Here’s some placeholder text for the second image.</p>
+                            <p>Dear Amanda,<br>
+                                when you're reading this you'll be in Germany, hopefully lying next to me, reading maybe on a phone, maybe on a laptop. This website is fully responsive so either works, incredible.<br>
+                                Anyways, what I really want to say is how much I love you and how much you contributed to making 2024 not just a tolerable year, but my favorite one so far. <br>
+                                I feel so lucky to be able to call you my girlfriend. Thinking about you 
+                                
+                                
+                            </p>
                         </div>
                     </div>
                 </section>
+
+               
+                <section id="image1" class="scroll-section">
+                    <div class="image-textbox-wrapper">
+                        <img src="./images/sled-with-bowties.png" alt="Image 1" class="fade-in hidden frame" style="background-color: #fff6ec;">
+                        <div class="textbox right-textbox">
+                            <h3>Felix' Presents</h3>
+                            <p>Some bow ties for a posh cat, we can buy the collar together. No balls, but dripped out around the neck, he's gon get some for sure.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Image 2 Section -->
+                <section id="image2" class="scroll-section">
+                    <div class="image-textbox-wrapper" >
+                        <div class="textbox left-textbox">
+                            <h3>Weekend Getaway</h3>
+                            <p>This one is not for the cat sadly. And it is not a plant. However, I thought it would be nice if we still do something for your office. So we will paint plant pots on a weekend trip in the East later this January.</p>
+                        </div>
+                        <div class="miau" style="position: relative;">
+                            <img src="./images/view.jpeg" alt="Image 2" class="fade-in hidden frame with-cam" style="padding: 10pt;">
+                            <img src="./images/camera.png" alt="camera" id="cam"/>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Airbnb Section -->
+                <section id="airbnb" class="scroll-section">
+                    <div class="image-textbox-wrapper">
+                        <div class="frame" style="padding: 35pt;">
+                            <div class="airbnb-embed-frame " data-id="1134933793312650668" data-view="home" data-hide-price="true" ><a href="https://www.airbnb.com/rooms/1134933793312650668?check_in=2025-01-17&amp;check_out=2025-01-19&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget">View On Airbnb</a><a href="https://www.airbnb.com/rooms/1134933793312650668?check_in=2025-01-17&amp;check_out=2025-01-19&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget" rel="nofollow">Cabin in Brighton · ★5.0 · 2 bedrooms · 3 beds · 1 bath</a><script async="" src="https://www.airbnb.com/embeddable/airbnb_jssdk"></script></div>
+                        </div>
+                        <div class="textbox right-textbox">
+                            <h3>Our AirBnB</h3>
+                            <p>This is a place I found, but its rather far away. I have a list depending on your availabilities in January.</p>
+                        </div>
+                    </div>
+                </section>
+
+        
             </main>
             <footer>
                 <p>© 2024 Mobi for Manda</p>
@@ -110,7 +136,7 @@
         <img src="https://i.etsystatic.com/41975932/r/il/3bc89a/5631948094/il_1140xN.5631948094_too6.jpg" alt="Small Emerging Image" id="bottom-image">
     </div> -->
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
 
